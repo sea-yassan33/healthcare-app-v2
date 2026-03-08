@@ -17,4 +17,7 @@
 npx shadcn@latest init -d
 npx shadcn@latest add
 
+## React Icons
+npm install react-icons
+
 ```
