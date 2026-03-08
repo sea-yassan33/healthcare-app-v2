@@ -11,7 +11,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     label: "トレーニング情報",
-    href: "#"
+    href: "/exercise"
   },
   {
     label: "AI支援ツール",
@@ -35,7 +35,7 @@ export const footerLinks = {
     title: "サービス",
     links: [
       { label: "健康情報", href: "#" },
-      { label: "トレーニング情報", href: "#" },
+      { label: "トレーニング情報", href: "/exercise" },
       { label: "AI支援ツール", href: "#" },
     ]
   },
