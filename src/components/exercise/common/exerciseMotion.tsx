@@ -11,7 +11,7 @@ export default function ExerciseMotion({ exercise, open, onClose }: Props) {
   const youtubeSrc = "https://www.youtube-nocookie.com/embed/" + exercise.youtubeID
   return (
     <Dialog open={open} onOpenChange={onClose}>
-      <DialogContent className="min-w-lg bg-white rounded-xl shadow-xl">
+      <DialogContent className="w-[95vw] md:min-w-lg bg-white rounded-xl shadow-xl">
         <div>
           <DialogTitle className="text-2xl font-bold border-l-4 border-black pl-3 mb-6">{exercise.exercise}</DialogTitle>
           <DialogDescription className="hidden">{exercise.exercise}の動画</DialogDescription>
