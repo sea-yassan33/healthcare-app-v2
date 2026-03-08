@@ -55,3 +55,9 @@ export interface TrainingMenuDetail {
 
 // 配列全体の型定義
 export type TrainingMenuDetailArray = TrainingMenuDetail[];
+
+// モーダル用
+export interface ExerciseModal{
+  exercise: string;
+  youtubeID: string;
+}

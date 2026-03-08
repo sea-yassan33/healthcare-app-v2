@@ -20,4 +20,6 @@ npx shadcn@latest add
 ## React Icons
 npm install react-icons
 
+## youtube
+npm install react-youtube
 ```

@@ -1,8 +1,19 @@
+"use client";
+import { useState } from "react";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow, } from '@/components/ui/table';
 import { TrainingMenuDetail } from '@/lib/interfaceutils';
+import { ExerciseModal } from "@/lib/interfaceutils";
+import ExerciseMotion from "../common/exerciseMotion";
 
 export default function TrainingDetail({ menu_detail }: { menu_detail: TrainingMenuDetail }) {
+  const [selectExercise,setSelectExercise] = useState<ExerciseModal| null>(null);
+  // モーダル
+  const openModal = (exercise: string,youtubeID: string) => {
+    setSelectExercise({exercise:exercise, youtubeID:youtubeID});
+  }
+  const closeModal = () => setSelectExercise(null);
   return (
+    <>
     <div className="p-6 md:p-8 space-y-10">
       {/* Section 1: Warming Up */}
       <section data-purpose="warming-up">
@@ -52,7 +63,9 @@ export default function TrainingDetail({ menu_detail }: { menu_detail: TrainingM
             </TableHeader>
             <TableBody>
               {menu_detail.machine_training.map((machine_training, index) => (
-                <TableRow key={index} className="hover:bg-[#F9FAF5] transition-colors">
+                <TableRow key={index}
+                 onClick={() => openModal(machine_training.exercise,machine_training.youtubeID)}
+                 className="hover:bg-[#F9FAF5] transition-colors">
                   <TableCell className="p-4 border-b border-gray-200 font-bold">{machine_training.exercise}</TableCell>
                   <TableCell className="p-4 border-b border-gray-200 text-center">{machine_training.target}</TableCell>
                   <TableCell className="p-4 border-b border-gray-200 text-center text-sky-600 font-bold text-xl">{machine_training.reps} <span className="text-sm font-normal text-gray-600">回</span></TableCell>
@@ -91,7 +104,8 @@ export default function TrainingDetail({ menu_detail }: { menu_detail: TrainingM
             </TableHeader>
             <TableBody>
               {menu_detail.aerobic_exercise.map((aerobic_exercise, index) => (
-                <TableRow key={index} className="hover:bg-[#F9FAF5] transition-colors">
+                <TableRow key={index} className="hover:bg-[#F9FAF5] transition-colors"
+                onClick={() => openModal(aerobic_exercise.exercise,aerobic_exercise.youtubeID)}>
                   <TableCell className="p-4 border-b border-gray-200 font-bold">{aerobic_exercise.exercise}</TableCell>
                   <TableCell className="p-4 border-b border-gray-200 text-center">{aerobic_exercise.time}</TableCell>
                   <TableCell className="p-4 border-b border-gray-200 text-center text-sky-600 font-bold text-xl">{aerobic_exercise.pace}</TableCell>
@@ -123,5 +137,12 @@ export default function TrainingDetail({ menu_detail }: { menu_detail: TrainingM
         </div>
       </section>
     </div>
+    {/* モーダル表示（指定のコンポーネントを利用） */}
+    <ExerciseMotion 
+      exercise={ selectExercise}
+      open={!!selectExercise}
+      onClose={closeModal}
+      />
+    </>
   );
 }
