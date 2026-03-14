@@ -10,7 +10,7 @@
 
 ## デプロイ
 
-[Health Hub](https://healthcare-app-seven.vercel.app/)
+[Health Hub](https://healthcare-app-v2.vercel.app/)
 
 # 追加モジュール
 ```sh

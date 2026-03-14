@@ -68,8 +68,8 @@ export default function TrainingDetail({ menu_detail }: { menu_detail: TrainingM
                  className="hover:bg-[#F9FAF5] transition-colors">
                   <TableCell className="p-4 border-b border-gray-200 font-bold">{machine_training.exercise}</TableCell>
                   <TableCell className="p-4 border-b border-gray-200 text-center">{machine_training.target}</TableCell>
-                  <TableCell className="p-4 border-b border-gray-200 text-center text-sky-600 font-bold text-xl">{machine_training.reps} <span className="text-sm font-normal text-gray-600">回</span></TableCell>
-                  <TableCell className="p-4 border-b border-gray-200 text-center text-sky-600 font-bold">{machine_training.sets} <span className="text-sm font-normal text-gray-600">セット</span></TableCell>
+                  <TableCell className="p-4 border-b border-gray-200 text-center text-sky-600 font-bold text-xl">{machine_training.reps}</TableCell>
+                  <TableCell className="p-4 border-b border-gray-200 text-center text-sky-600 font-bold">{machine_training.sets}</TableCell>
                 </TableRow>
               ))}
             </TableBody>

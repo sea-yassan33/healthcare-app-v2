@@ -30,7 +30,7 @@ const trainingMenus: TrainingItem[] = [
     description: "腕、肩、背中をターゲットにしたメニューです。",
     accentColor: "from-cyan-400 to-teal-300",
     badgeColor: "bg-cyan-50 text-cyan-600 border-cyan-200",
-    url: "#"
+    url: "/exercise/menu_2"
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ const trainingMenus: TrainingItem[] = [
     description: "脚と臀部をターゲットにしたメニューです。",
     accentColor: "from-teal-400 to-emerald-300",
     badgeColor: "bg-teal-50 text-teal-600 border-teal-200",
-    url: "#"
+    url: "/exercise/menu_3"
   },
   {
     id: 4,
@@ -50,7 +50,7 @@ const trainingMenus: TrainingItem[] = [
     description: "体幹トレーニング中心のメニューです。",
     accentColor: "from-sky-500 to-blue-400",
     badgeColor: "bg-sky-50 text-sky-600 border-sky-200",
-    url: "#"
+    url: "/exercise/menu_4"
   },
   {
     id: 5,
@@ -60,7 +60,7 @@ const trainingMenus: TrainingItem[] = [
     description: "インターバルトレーニング中心のメニューです。",
     accentColor: "from-blue-400 to-indigo-400",
     badgeColor: "bg-blue-50 text-blue-600 border-blue-200",
-    url: "#"
+    url: "/exercise/menu_5"
   },
 ];
 
